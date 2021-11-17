@@ -1,0 +1,7 @@
+<h1>Index page</h1>
+
+<% @restaurants.each do |res| %>
+<li><%= link_to "name: #{res.name} address: #{res.address} category: #{res.category}", restaurant_path(res), class: "btn btn-primary" %></li>
+<% end %>
+
+<%= link_to "new", new_restaurant_path, class: "btn btn-primary" %>
